@@ -30,7 +30,7 @@ namespace TipCalculator {
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.txtTipRate = new System.Windows.Forms.TextBox();
+            this.txtTipPercent = new System.Windows.Forms.TextBox();
             this.txtTipAmt = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -51,6 +51,7 @@ namespace TipCalculator {
             this.txtBillAmt.Name = "txtBillAmt";
             this.txtBillAmt.Size = new System.Drawing.Size(150, 31);
             this.txtBillAmt.TabIndex = 1;
+            this.txtBillAmt.TextChanged += new System.EventHandler(this.txtBillAmt_TextChanged);
             // 
             // label2
             // 
@@ -80,13 +81,13 @@ namespace TipCalculator {
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // txtTipRate
+            // txtTipPercent
             // 
-            this.txtTipRate.Location = new System.Drawing.Point(222, 149);
-            this.txtTipRate.Name = "txtTipRate";
-            this.txtTipRate.ReadOnly = true;
-            this.txtTipRate.Size = new System.Drawing.Size(150, 31);
-            this.txtTipRate.TabIndex = 5;
+            this.txtTipPercent.Location = new System.Drawing.Point(222, 149);
+            this.txtTipPercent.Name = "txtTipPercent";
+            this.txtTipPercent.ReadOnly = true;
+            this.txtTipPercent.Size = new System.Drawing.Size(150, 31);
+            this.txtTipPercent.TabIndex = 5;
             // 
             // txtTipAmt
             // 
@@ -108,12 +109,14 @@ namespace TipCalculator {
             // 
             // FormTipCalculator
             // 
+            this.AcceptButton = this.btnCalculate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(449, 381);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtTipAmt);
-            this.Controls.Add(this.txtTipRate);
+            this.Controls.Add(this.txtTipPercent);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -134,7 +137,7 @@ namespace TipCalculator {
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.TextBox txtTipRate;
+        private System.Windows.Forms.TextBox txtTipPercent;
         private System.Windows.Forms.TextBox txtTipAmt;
         private System.Windows.Forms.Button btnExit;
     }

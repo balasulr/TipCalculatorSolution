@@ -30,10 +30,14 @@ namespace TipCalculator {
             var billAmount = Convert.ToDecimal(txtBillAmt.Text);
 
             var tipPercent = 0.2m;
-            txtTipAmt.Text = tipPercent.ToString("p0");
+            txtTipPercent.Text = tipPercent.ToString("p0");
 
             var tipAmount = billAmount * tipPercent;
             txtTipAmt.Text = tipAmount.ToString("c");
+        }
+
+        private void txtBillAmt_TextChanged(object sender, EventArgs e) {
+
         }
     }
 }
